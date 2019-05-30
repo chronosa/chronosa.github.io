@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>cloudformation-2 (UPDATE) | Chronosa_Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Cloudformation의 변경 방식개요 - Change Set을 통한 업데이트스택을 업데이트하려면 원본 스택 템플릿의 수정된 버전, 다른 입력 파라미터 또는 둘 다를 제출하여 변경 세트를 생성합니다. AWS CloudFormation에서는 수정된 템플릿을 원본 템플릿과 비교해 변경 세트를 생성합니다. 변경 세트에는 제안된 변경 사항이 나열되어 있습니다.">
+<meta name="keywords" content="AWS, Cloudformation, DEVOPS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cloudformation-2 (UPDATE)">
+<meta property="og:url" content="https://chronosa.github.io/2019/05/27/cloudformation_2/index.html">
+<meta property="og:site_name" content="Chronosa_Blog">
+<meta property="og:description" content="Cloudformation의 변경 방식개요 - Change Set을 통한 업데이트스택을 업데이트하려면 원본 스택 템플릿의 수정된 버전, 다른 입력 파라미터 또는 둘 다를 제출하여 변경 세트를 생성합니다. AWS CloudFormation에서는 수정된 템플릿을 원본 템플릿과 비교해 변경 세트를 생성합니다. 변경 세트에는 제안된 변경 사항이 나열되어 있습니다.">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://chronosa.github.io/images/update-stack-diagram.png">
+<meta property="og:image" content="https://chronosa.github.io/images/update-stack-changesets-diagram.png">
+<meta property="og:updated_time" content="2019-05-29T07:15:34.256Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="cloudformation-2 (UPDATE)">
+<meta name="twitter:description" content="Cloudformation의 변경 방식개요 - Change Set을 통한 업데이트스택을 업데이트하려면 원본 스택 템플릿의 수정된 버전, 다른 입력 파라미터 또는 둘 다를 제출하여 변경 세트를 생성합니다. AWS CloudFormation에서는 수정된 템플릿을 원본 템플릿과 비교해 변경 세트를 생성합니다. 변경 세트에는 제안된 변경 사항이 나열되어 있습니다.">
+<meta name="twitter:image" content="https://chronosa.github.io/images/update-stack-diagram.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Chronosa_Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Chronosa_Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://chronosa.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-cloudformation_2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/27/cloudformation_2/" class="article-date">
+  <time datetime="2019-05-27T04:53:44.000Z" itemprop="datePublished">2019-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      cloudformation-2 (UPDATE)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Cloudformation의-변경-방식"><a href="#Cloudformation의-변경-방식" class="headerlink" title="Cloudformation의 변경 방식"></a>Cloudformation의 변경 방식</h1><h2 id="개요-Change-Set을-통한-업데이트"><a href="#개요-Change-Set을-통한-업데이트" class="headerlink" title="개요 - Change Set을 통한 업데이트"></a>개요 - Change Set을 통한 업데이트</h2><p>스택을 업데이트하려면 원본 스택 템플릿의 수정된 버전, 다른 입력 파라미터 또는 둘 다를 제출하여 변경 세트를 생성합니다. AWS CloudFormation에서는 수정된 템플릿을 원본 템플릿과 비교해 변경 세트를 생성합니다. 변경 세트에는 제안된 변경 사항이 나열되어 있습니다. 변경 사항을 검토한 후 변경 세트를 실행해 스택을 업데이트하거나 새 변경 세트를 생성할 수 있습니다. 다음 다이어그램은 스택 업데이트 워크플로우를 요약해서 보여줍니다.<br><img src="/images/update-stack-diagram.png" alt="update-stack-diagram.png"><br><a href="https://docs.aws.amazon.com/ko_kr/AWSCloudFormation/latest/UserGuide/cfn-whatis-howdoesitwork.html" target="_blank" rel="noopener">출처</a></p>
+<h2 id="스택-리소스의-업데이트-동작"><a href="#스택-리소스의-업데이트-동작" class="headerlink" title="스택 리소스의 업데이트 동작"></a>스택 리소스의 업데이트 동작</h2><p>스택 리소스를 업데이트 할 수 있는 방법은 아래 두가지이다.</p>
+<ol>
+<li>직접 업데이트</li>
+<li>변경 세트(Change Set)을 통한 업데이트<br>업데이트 동작은 총 세 가지 동작으로 나뉘게 된다.</li>
+<li>업데이트(무중단)</li>
+<li>업데이트(중단) : 다운타임이 발생하지만 물리적 ID는 유지</li>
+<li>대체 : 리소스가 다시 생성되며 물리적 ID도 새로 생성</li>
+</ol>
+<p>또한, 중첩된 스택(AWS::CloudFormation::Stack)이 포함되어 있는 경우 해당 스택들도 같이 업데이트가 수행되게 된다.</p>
+<h2 id="변경-세트를-사용하여-스택-업데이트"><a href="#변경-세트를-사용하여-스택-업데이트" class="headerlink" title="변경 세트를 사용하여 스택 업데이트"></a>변경 세트를 사용하여 스택 업데이트</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Validate Check</span><br><span class="line">aws cloudformation validate-template --template-body file://first_template.yaml</span><br><span class="line"># Deploy (Dry-Run)</span><br><span class="line">aws cloudformation deploy --stack-name sj1117park-make --template-file first_template.yaml --parameter-overrides &quot;AvailabilityZones=ap-northeast-1a&quot; --no-execute-changeset --region ap-northeast-1</span><br><span class="line"># Run Check</span><br><span class="line">aws cloudformation describe-change-set --change-set-name arn:aws:cloudformation:ap-northeast-2:912698603521:changeSet/awscli-cloudformation-package-deploy-1558935846/62085961-adf3-4787-8f7e-f92c4579541a --region ap-northeast-1</span><br><span class="line"># Deploy</span><br><span class="line">aws cloudformation deploy --stack-name sj1117park-make --template-file first_template.yaml --parameter-overrides &quot;AvailabilityZones=ap-northeast-1a&quot; --region ap-northeast-1</span><br></pre></td></tr></table></figure>
+<p><img src="/images/update-stack-changesets-diagram.png" alt="update-stack-changesets-diagram.png"></p>
+<h2 id="실제-스택-생성"><a href="#실제-스택-생성" class="headerlink" title="실제 스택 생성"></a>실제 스택 생성</h2><p><a href="https://github.com/aws-samples/aws-refarch-wordpress" target="_blank" rel="noopener">참조</a><br><a href="https://aws.amazon.com/ko/quickstart/?quickstart-all.sort-by=item.additionalFields.publishDate&amp;quickstart-all.sort-order=desc" target="_blank" rel="noopener">Quick Starts</a></p>
+<ol>
+<li><a href="https://aws.amazon.com/ko/quickstart/architecture/linux-bastion/" target="_blank" rel="noopener">AWS 기반 Linux 배스천 호스트</a></li>
+<li><a href="https://aws.amazon.com/ko/quickstart/architecture/cicd-taskcat/" target="_blank" rel="noopener">AWS 기반 AWS CloudFormation 템플릿용 CI/CD 파이프라인</a></li>
+</ol>
+<h2 id="과정"><a href="#과정" class="headerlink" title="과정"></a>과정</h2><ol>
+<li>VPC 생성</li>
+<li>Subnet 생성</li>
+<li>EC2 생성</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://chronosa.github.io/2019/05/27/cloudformation_2/" data-id="cjwar9vc30000cfysho8mnmn0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AWS-Cloudformation-DEVOPS/">AWS, Cloudformation, DEVOPS</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/05/29/cloudformation_1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          cloudformation-1 (INTRO)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/26/test1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">test1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS-Cloudformation-DEVOPS/">AWS, Cloudformation, DEVOPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCP-Monitoring/">GCP, Monitoring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TIP-BASH/">TIP, BASH</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AWS-Cloudformation-DEVOPS/" style="font-size: 20px;">AWS, Cloudformation, DEVOPS</a> <a href="/tags/GCP-Monitoring/" style="font-size: 10px;">GCP, Monitoring</a> <a href="/tags/TIP-BASH/" style="font-size: 10px;">TIP, BASH</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/05/30/today-tip-20190530/">today_tip_20190530</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/29/cloudformation_3/">cloudformation_3 (CloudFormer)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/29/cloudformation_1/">cloudformation-1 (INTRO)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/27/cloudformation_2/">cloudformation-2 (UPDATE)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/26/test1/">test1</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Jin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

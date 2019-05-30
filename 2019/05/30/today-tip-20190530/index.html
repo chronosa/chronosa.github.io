@@ -5,19 +5,20 @@
   
 
   
-  <title>test1 | Chronosa_Blog</title>
+  <title>today_tip_20190530 | Chronosa_Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="test1">
+  <meta name="description" content="ARRAYBASH에서는 Array를 사용하지 않는 편이다.실제로 쓸 일이 별로 없기도 하고, 맨 처음에 Shell을 배울 때 순수한 Bone Shell의 기능만을 가급적 사용하라는멘토님의 말을 많이 들어서 그런 것 같다. 그래도, 가끔 BASH 코드를 보면 Array가 쓰이는 경우가 있어서 아래정도의 사용 예는 알아두면 좋을 것 같다.123456789arr">
+<meta name="keywords" content="TIP, BASH">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test1">
-<meta property="og:url" content="https://chronosa.github.io/2019/05/26/test1/index.html">
+<meta property="og:title" content="today_tip_20190530">
+<meta property="og:url" content="https://chronosa.github.io/2019/05/30/today-tip-20190530/index.html">
 <meta property="og:site_name" content="Chronosa_Blog">
-<meta property="og:description" content="test1">
+<meta property="og:description" content="ARRAYBASH에서는 Array를 사용하지 않는 편이다.실제로 쓸 일이 별로 없기도 하고, 맨 처음에 Shell을 배울 때 순수한 Bone Shell의 기능만을 가급적 사용하라는멘토님의 말을 많이 들어서 그런 것 같다. 그래도, 가끔 BASH 코드를 보면 Array가 쓰이는 경우가 있어서 아래정도의 사용 예는 알아두면 좋을 것 같다.123456789arr">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-26T15:45:21.865Z">
+<meta property="og:updated_time" content="2019-05-30T14:30:18.081Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test1">
-<meta name="twitter:description" content="test1">
+<meta name="twitter:title" content="today_tip_20190530">
+<meta name="twitter:description" content="ARRAYBASH에서는 Array를 사용하지 않는 편이다.실제로 쓸 일이 별로 없기도 하고, 맨 처음에 Shell을 배울 때 순수한 Bone Shell의 기능만을 가급적 사용하라는멘토님의 말을 많이 들어서 그런 것 같다. 그래도, 가끔 BASH 코드를 보면 Array가 쓰이는 경우가 있어서 아래정도의 사용 예는 알아두면 좋을 것 같다.123456789arr">
   
     <link rel="alternate" href="/atom.xml" title="Chronosa_Blog" type="application/atom+xml">
   
@@ -64,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-test1" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-today-tip-20190530" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/05/26/test1/" class="article-date">
-  <time datetime="2019-05-26T15:45:14.000Z" itemprop="datePublished">2019-05-26</time>
+    <a href="/2019/05/30/today-tip-20190530/" class="article-date">
+  <time datetime="2019-05-30T14:25:15.000Z" itemprop="datePublished">2019-05-30</time>
 </a>
     
   </div>
@@ -78,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      test1
+      today_tip_20190530
     </h1>
   
 
@@ -86,33 +87,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>test1</p>
+        <h1 id="ARRAY"><a href="#ARRAY" class="headerlink" title="ARRAY"></a>ARRAY</h1><p>BASH에서는 Array를 사용하지 않는 편이다.<br>실제로 쓸 일이 별로 없기도 하고, 맨 처음에 Shell을 배울 때 순수한 Bone Shell의 기능만을 가급적 사용하라는<br>멘토님의 말을 많이 들어서 그런 것 같다.</p>
+<p>그래도, 가끔 BASH 코드를 보면 Array가 쓰이는 경우가 있어서 아래정도의 사용 예는 알아두면 좋을 것 같다.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">array_name=(&quot;value 1&quot; &quot;value 2&quot; &quot;value 3&quot;)</span><br><span class="line"> </span><br><span class="line">echo &quot;array_name[0]     = $&#123;array_name[0]&#125;&quot;  #print array_name[0]</span><br><span class="line">echo &quot;array_name[2]     = $&#123;array_name[2]&#125;&quot;  #print array_name[2]</span><br><span class="line">echo &quot;array_name[*]     = $&#123;array_name[*]&#125;&quot;  #print array_name all item</span><br><span class="line">echo &quot;array_name[@]     = $&#123;array_name[@]&#125;&quot;  #print array_name all item</span><br><span class="line">echo &quot;array_name index  = $&#123;!array_name[@]&#125;&quot; #print array_name index number</span><br><span class="line">echo &quot;array_name size   = $&#123;#array_name[@]&#125;&quot; #print array_name size</span><br><span class="line">echo &quot;array_name[0] size= $&#123;#array_name[0]&#125;&quot; #print array_name[0] size</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://blog.redjini.com/282" target="_blank" rel="noopener">출처</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chronosa.github.io/2019/05/26/test1/" data-id="cjwar9vd6000ecfysr2na1d0n" class="article-share-link">Share</a>
+      <a data-url="https://chronosa.github.io/2019/05/30/today-tip-20190530/" data-id="cjwar9vd0000acfysc5ld6mvk" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TIP-BASH/">TIP, BASH</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2019/05/27/cloudformation_2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          cloudformation-2 (UPDATE)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/05/26/gcp_1/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/05/29/cloudformation_3/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">GCP NOTE-1</div>
+      <div class="article-nav-title">cloudformation_3 (CloudFormer)</div>
     </a>
   
 </nav>
