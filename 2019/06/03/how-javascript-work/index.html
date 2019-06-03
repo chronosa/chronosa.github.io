@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Hello World · chronosa studio</title>
+    <title>how_javascript_work · chronosa studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -232,7 +232,7 @@
                 <a href="/">chronosa studio</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Hello World</a>
+                <a href="#" class="post-name">how_javascript_work</a>
             </div>
     </div>
     
@@ -262,7 +262,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Hello World
+            how_javascript_work
             <!-- 404 -->
             
         </h1>
@@ -279,14 +279,24 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="javascript">javascript</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="python">python</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="runtime">runtime</a>
+    
+</div>
+                
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">73</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">80</span>Reading time: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/05/26</span>
+                    <span class="post-intro-time">2019/06/03</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -410,28 +420,20 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="자바스크립트는-어떻게-동작하는가"><a href="#자바스크립트는-어떻게-동작하는가" class="headerlink" title="자바스크립트는 어떻게 동작하는가?"></a>자바스크립트는 어떻게 동작하는가?</h1><h2 id="부제-프로그램은-어떻게-실행되는가"><a href="#부제-프로그램은-어떻게-실행되는가" class="headerlink" title="부제 : 프로그램은 어떻게 실행되는가?"></a>부제 : 프로그램은 어떻게 실행되는가?</h2><p>역량강화를 위해 Node.js와 Anagular Study를 하고 있다.<br>근데.. 과연 자바스크립트는 어떻게 동작하는가?</p>
+<p>그동안 별 생각없이 브라우저를 키고 비동기적으로 사이트들을 돌아다녔지만<br>한번도 궁금한 적이 없었는데, 대체 어떻게 동작하는거지?</p>
+<p>근데 또 문득 생각이 드는 건, Python은 대체 어떻게 동작하는가??<br>Python Code를 거의 매일매일 만들고 실행하는데, 대강은 알지만 정확히 어떻게 동작하는지는 신경을 쓴 적이 없는 것 같다.</p>
+<p>이에 대해 아래와 같이 공부하여 내용을 정리하고자 한다.</p>
+<h2 id="python-runtime"><a href="#python-runtime" class="headerlink" title="python runtime"></a>python runtime</h2><p><a href="https://engineering.huiseoul.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EA%B0%80-%EC%97%94%EC%A7%84-%EB%9F%B0%ED%83%80%EC%9E%84-%EC%BD%9C%EC%8A%A4%ED%83%9D-%EA%B0%9C%EA%B4%80-ea47917c8442" target="_blank" rel="noopener">javascript runtime 출처</a><br><a href="https://aliwo.github.io/swblog/python/python-runtime/#" target="_blank" rel="noopener">python runtime 출처</a></p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>Author：<a href="https://chronosa.github.io">Jin</a>
-            </p><p>原文链接：<a href="https://chronosa.github.io/2019/05/26/hello-world/">https://chronosa.github.io/2019/05/26/hello-world/</a>
-            </p><p>发表日期：<a href="https://chronosa.github.io/2019/05/26/hello-world/">May 26th 2019, 3:18:53 pm</a>
-            </p><p>更新日期：<a href="https://chronosa.github.io/2019/05/26/hello-world/">May 26th 2019, 3:18:53 pm</a>
+            </p><p>原文链接：<a href="https://chronosa.github.io/2019/06/03/how-javascript-work/">https://chronosa.github.io/2019/06/03/how-javascript-work/</a>
+            </p><p>发表日期：<a href="https://chronosa.github.io/2019/06/03/how-javascript-work/">June 3rd 2019, 2:46:09 pm</a>
+            </p><p>更新日期：<a href="https://chronosa.github.io/2019/06/03/how-javascript-work/">June 3rd 2019, 2:59:15 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -439,13 +441,13 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/05/27/cloudformation_2/" title="cloudformation-2 (UPDATE)">
-                    <div class="nextTitle">cloudformation-2 (UPDATE)</div>
-                </a>
-            
         </li>
         <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/05/30/gcp_1/" title="GCP NOTE-1">
+                    <div class="prevTitle">GCP NOTE-1</div>
+                </a>
             
         </li>
     </ul>
@@ -556,7 +558,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#자바스크립트는-어떻게-동작하는가"><span class="toc-number">1.</span> <span class="toc-text">자바스크립트는 어떻게 동작하는가?</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#부제-프로그램은-어떻게-실행되는가"><span class="toc-number">1.1.</span> <span class="toc-text">부제 : 프로그램은 어떻게 실행되는가?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python-runtime"><span class="toc-number">1.2.</span> <span class="toc-text">python runtime</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
