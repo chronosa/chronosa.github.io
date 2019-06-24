@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>cloudformation-1 (INTRO) · chronosa studio</title>
+    <title>chronosa studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -218,23 +218,12 @@
 </head>
 
     
-        <body class="post-body">
-    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/">chronosa studio</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">cloudformation-1 (INTRO)</a>
-            </div>
-    </div>
     
     <a class="home-link" href="/">chronosa studio</a>
 </header>
@@ -246,78 +235,24 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
-            cloudformation-1 (INTRO)
-            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                    <div class="post-intro-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="AWS">AWS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cloudformation">Cloudformation</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="DEVOPS">DEVOPS</a>
-    
-</div>
-                
-                
-                    <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">581</span>Reading time: <span class="post-count reading-time">3 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/05/30</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer">&#xe602;</span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
-                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
-                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
-                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -418,93 +353,51 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <h1 id="Cloudformation"><a href="#Cloudformation" class="headerlink" title="Cloudformation"></a>Cloudformation</h1><p>AWS CloudFormation에서는 클라우드 환경 내 모든 인프라 리소스를 설명하고 프로비저닝할 수 있도록 공통 언어를 제공합니다.</p>
-<ul>
-<li>Text 파일을 통한 모델링 - 구성 요소 표준화, 구성 규정 준수 가능</li>
-<li>자동화 및 배포 - 오류 탐지 시 변경 사항 자동 롤백</li>
-<li>Infra as a Code - 버전 제어, 검토, 배포 등의 작업이 가능</li>
-</ul>
-<p><img src="/images/cloudformation_flow.png" alt="cloudformation flow"><br><a href="https://aws.amazon.com/ko/cloudformation/" target="_blank" rel="noopener">소개</a></p>
-<h2 id="Grammer"><a href="#Grammer" class="headerlink" title="Grammer"></a>Grammer</h2><p>WordPress Sample Template 내용을 보고 공부한 내용 정리<br><a href="https://s3-ap-northeast-1.amazonaws.com/cloudformation-templates-ap-northeast-1/WordPress_Single_Instance.template" target="_blank" rel="noopener">Sample Code</a></p>
-<h1 id="구성요소"><a href="#구성요소" class="headerlink" title="구성요소"></a>구성요소</h1><ol>
-<li>AWSTemplateFormatVersion</li>
-<li>Description</li>
-<li>Parameters</li>
-<li>Mappings</li>
-<li>Resources</li>
-<li>Outputs</li>
-</ol>
-<h1 id="내장함수"><a href="#내장함수" class="headerlink" title="내장함수"></a>내장함수</h1><h2 id="Fn-FindInMap"><a href="#Fn-FindInMap" class="headerlink" title="Fn::FindInMap"></a>Fn::FindInMap</h2><p>Fn::FindInMap 내장 함수는 Mappings 섹션에서 선언된 2수준 맵의 키에 해당하는 값을 반환합니다.<br><a href="https://docs.aws.amazon.com/ko_kr/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-findinmap.html" target="_blank" rel="noopener">Fn::FindInMap</a></p>
-<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><p>Ref 내장 함수는 지정된 파라미터 또는 리소스에 대한 정보를 반환합니다.<br><a href="https://docs.aws.amazon.com/ko_kr/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html" target="_blank" rel="noopener">Ref</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Fn::FindInMap: [ MapName, TopLevelKey, SecondLevelKey ] </span><br><span class="line">또는, !FindInMap [ MapName, TopLevelKey, SecondLevelKey ]</span><br><span class="line"></span><br><span class="line">Ref: logicalName 또는, !Ref logicalName</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">AWSRegionArch2AMI:</span><br><span class="line">  us-east-1:</span><br><span class="line">    HVM64: ami-0080e4c5bc078760e</span><br><span class="line">    HVMG2: ami-0aeb704d503081ea6</span><br><span class="line">  us-west-2:</span><br><span class="line">    HVM64: ami-01e24be29428c15b2</span><br><span class="line">    HVMG2: ami-0fe84a5b4563d8f27</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">AWSInstanceType2Arch:</span><br><span class="line">  t1.micro:</span><br><span class="line">    Arch: HVM64</span><br><span class="line">  t2.nano:</span><br><span class="line">    Arch: HVM64</span><br></pre></td></tr></table></figure>
-
-<p>아래 코드는 샘플코드의 일부로, ImageId를 !FindInMap 내장 함수를 통해서 반환을 받는다.<br>이 과정에서, TopLevelKey는 모두 !Ref 내장 함수를 통해 반환받기 때문에, InstanceType에 구애받지 않고 AMI를 지정할 수 있다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ImageId: !FindInMap</span><br><span class="line">  - AWSRegionArch2AMI       &lt;&lt; MapName</span><br><span class="line">  - !Ref &apos;AWS::Region&apos;      &lt;&lt; TopLevelKey (us-east-1, us-west-2, ...)</span><br><span class="line">  - !FindInMap              &lt;&lt; SecondLevelKey</span><br><span class="line">    - AWSInstanceType2Arch</span><br><span class="line">    - !Ref InstanceType     &lt;&lt; t1.micro, t2.nano, ...</span><br><span class="line">    - Arch</span><br></pre></td></tr></table></figure>
-
-<h2 id="Fn-Sub"><a href="#Fn-Sub" class="headerlink" title="Fn::Sub"></a>Fn::Sub</h2><h3 id="정의"><a href="#정의" class="headerlink" title="정의"></a>정의</h3><p>내장 함수 Fn::Sub는 입력 문자열의 변수를 지정한 값으로 바꿉니다. 템플릿에 이 함수를 사용해 스택을 생성하거나 업데이트해야만 사용할 수 있는 값이 포함된 명령 또는 출력을 만들 수 있습니다.<br>–&gt; python의 print(“%s” % var)와 같은 문자열 포맷팅과 비슷한 구문으로, 가변적인 값을 반환해야 할 때 사용<br><a href="https://docs.aws.amazon.com/ko_kr/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html" target="_blank" rel="noopener">Fn::Sub</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">!Sub</span><br><span class="line">  - String</span><br><span class="line">  - &#123; Var1Name: Var1Value, Var2Name: Var2Value &#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#1. Mapping 사용 예</span><br><span class="line">Name: !Sub</span><br><span class="line">  - www.$&#123;Domain&#125;</span><br><span class="line">  - &#123; Domain: !Ref RootDomainName &#125;</span><br><span class="line"></span><br><span class="line">#2. Mapping 미사용 예</span><br><span class="line">!Sub &apos;arn:aws:ec2:$&#123;AWS::Region&#125;:$&#123;AWS::AccountId&#125;:vpc/$&#123;vpc&#125;&apos;</span><br><span class="line"></span><br><span class="line">#3. userdata 설정 예</span><br><span class="line">UserData:</span><br><span class="line">  Fn::Base64:</span><br><span class="line">    !Sub |</span><br><span class="line">      #!/bin/bash -xe</span><br><span class="line">      yum update -y aws-cfn-bootstrap</span><br><span class="line">      /opt/aws/bin/cfn-init -v --stack $&#123;AWS::StackName&#125; --resource LaunchConfig --configsets wordpress_install --region $&#123;AWS::Region&#125;</span><br><span class="line">      /opt/aws/bin/cfn-signal -e $? --stack $&#123;AWS::StackName&#125; --resource WebServerGroup --region $&#123;AWS::Region&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h2><h1 id="AWS-Console"><a href="#AWS-Console" class="headerlink" title="AWS Console"></a>AWS Console</h1><ol>
-<li>AWS Console &gt; Cloudstack 접속</li>
-<li>Create Stack 클릭 후 Amazon S3 URL 입력, View in Designer 클릭</li>
-<li>코드 작성 후 Validation Check 후 Create Stack 가능</li>
-</ol>
-<h1 id="AWS-CLI"><a href="#AWS-CLI" class="headerlink" title="AWS CLI"></a>AWS CLI</h1><p>아래 Shell Script 참조</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">&lt;&lt;COMMENT</span><br><span class="line">@Name : deploy_template.sh</span><br><span class="line">@Description : Create cloudformation stack and check status</span><br><span class="line">@Input</span><br><span class="line">  - stack_name</span><br><span class="line">  - command_file (TBD)</span><br><span class="line">COMMENT</span><br><span class="line"></span><br><span class="line">REGION=&quot;ap-northeast-1&quot;</span><br><span class="line"></span><br><span class="line">echo -n &quot;STACK NAME : &quot;</span><br><span class="line">read STACK_NAME</span><br><span class="line"></span><br><span class="line">function create_stack()</span><br><span class="line">&#123;</span><br><span class="line">    aws cloudformation create-stack --region $REGION --stack-name $STACK_NAME \</span><br><span class="line">        --template-body file:///home/chronosa/cloudformation/WordPress_Single_Instance.yaml  \</span><br><span class="line">        --parameters ParameterKey=KeyName,ParameterValue=&quot;psj_myformation_tokyo&quot; \</span><br><span class="line">        ParameterKey=InstanceType,ParameterValue=&quot;t2.micro&quot; \</span><br><span class="line">        ParameterKey=SSHLocation,ParameterValue=&quot;0.0.0.0/0&quot; \</span><br><span class="line">        ParameterKey=DBUser,ParameterValue=&quot;test&quot; \</span><br><span class="line">        ParameterKey=DBPassword,ParameterValue=&quot;sksmsxptmxm&quot; \</span><br><span class="line">        ParameterKey=DBRootPassword,ParameterValue=&quot;sksmsvotmdnjem&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">result=$(create_stack)</span><br><span class="line"></span><br><span class="line">if [ $? -ne 0 ]</span><br><span class="line">then</span><br><span class="line">    echo $result</span><br><span class="line">    exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">STACK_ID=$(echo $result | awk -F &apos;&quot;&apos; &apos;&#123; print $4 &#125;&apos; | tr -d &apos;\n&apos; | tr -d &apos; &apos;)</span><br><span class="line">echo $STACK_ID</span><br><span class="line">while [ 1 ]</span><br><span class="line">do</span><br><span class="line">    cli_result=$(aws cloudformation describe-stacks --stack-name $STACK_ID --region $REGION | grep StackStatus | sed &apos;s/ //g&apos; | tr -d &quot;,&quot;)</span><br><span class="line">    if [ echo &quot;$cli_result&quot; | egrep &quot;ROLLBACK_COMPLETE|CREATE_COMPLETE&quot; ]</span><br><span class="line">    then</span><br><span class="line">        break</span><br><span class="line">    fi</span><br><span class="line">    sleep 3</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-
-<h2 id="AWS-Best-Pratices-architecture"><a href="#AWS-Best-Pratices-architecture" class="headerlink" title="AWS Best Pratices architecture"></a>AWS Best Pratices architecture</h2><p><a href="https://github.com/aws-samples/aws-refarch-wordpress" target="_blank" rel="noopener">Hosting WordPress on AWS</a><br><a href="https://s3-ap-northeast-1.amazonaws.com/cf-templates-11zmew7ilixiu-ap-northeast-1/2019144O1B-new.template4c5u52zx3w6" target="_blank" rel="noopener">https://s3-ap-northeast-1.amazonaws.com/cf-templates-11zmew7ilixiu-ap-northeast-1/2019144O1B-new.template4c5u52zx3w6</a></p>
-
-    </article>
-    <!-- license  -->
+            <main class="main index-page">
     
-        <div class="license-wrapper">
-            <p>Author：<a href="https://chronosa.github.io">Jin</a>
-            </p><p>link：<a href="https://chronosa.github.io/2019/05/30/cloudformation_1/">https://chronosa.github.io/2019/05/30/cloudformation_1/</a>
-            </p><p>발행일：<a href="https://chronosa.github.io/2019/05/30/cloudformation_1/">May 30th 2019, 2:32:17 pm</a>
-            </p><p>업데이트：<a href="https://chronosa.github.io/2019/05/30/cloudformation_1/">May 30th 2019, 2:32:17 pm</a>
-        </p></div>
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/06/18/S3-vs-GCPstorage/">
+            
+                <span>S3_vs_GCPstorage</span>
+        </a>
+        <div class="abstract-content">
+            AWS S3 VS GCPstorage시간날때마다 틈틈히 작성..
+출처AWS 전문가를 위한 Google Cloud Platform: 저장소GCP Cloud Storage 핵심 용어Amazon S3 개념
+ConceptBucket, Objects는 AWS나 GCP나 비슷한 개념을 가지고 있다.다만 Storage Class와 Consistency Model에 차이가 있는 것으로 보인다.
+내구성두 개의 CSP모두 9*11을 보장AWS
+
+Amazon S3 Standard, S3 Standard?IA, S3 One Zone-IA 및 S3 ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/18</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="AWS">AWS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="GCP">GCP</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="S3">S3</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="GCPstorage">GCPstorage</a>
+    
+</div>
+            
+        </div>
+    </article>
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/05/30/gcp_1/" title="GCP NOTE-1">
-                    <div class="nextTitle">GCP NOTE-1</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/05/30/daily_tip_20190530/" title="today_tip_20190530">
-                    <div class="prevTitle">today_tip_20190530</div>
-                </a>
-            
-        </li>
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-<!-- City版安装代码已完成 -->
     
-    
-    <!-- partial('_partial/comment/changyan') -->
-    <!--PC版-->
-
-
-    
-    
-
-    <!-- 评论 -->
 </main>
-
             <!-- profile -->
             
         </div>
@@ -581,24 +474,6 @@ height:50vh;
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style=
-    
-
-
-
-
-
-
-
-top:50vh;
-
-    >
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Cloudformation"><span class="toc-number">1.</span> <span class="toc-text">Cloudformation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Grammer"><span class="toc-number">1.1.</span> <span class="toc-text">Grammer</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#구성요소"><span class="toc-number">2.</span> <span class="toc-text">구성요소</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#내장함수"><span class="toc-number">3.</span> <span class="toc-text">내장함수</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Fn-FindInMap"><span class="toc-number">3.1.</span> <span class="toc-text">Fn::FindInMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ref"><span class="toc-number">3.2.</span> <span class="toc-text">Ref</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fn-Sub"><span class="toc-number">3.3.</span> <span class="toc-text">Fn::Sub</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#정의"><span class="toc-number">3.3.1.</span> <span class="toc-text">정의</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Run"><span class="toc-number">3.4.</span> <span class="toc-text">Run</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AWS-Console"><span class="toc-number">4.</span> <span class="toc-text">AWS Console</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AWS-CLI"><span class="toc-number">5.</span> <span class="toc-text">AWS CLI</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#AWS-Best-Pratices-architecture"><span class="toc-number">5.1.</span> <span class="toc-text">AWS Best Pratices architecture</span></a></li></ol></li></ol>
-    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -924,8 +799,6 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
